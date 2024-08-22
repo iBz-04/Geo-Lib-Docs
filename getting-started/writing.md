@@ -1,126 +1,33 @@
-# Writing
+# Expanding GeoLib
 
-## Resource Directory
+GeoLib has laid a strong foundation for working with geometric shapes in Python. With the current focus on squares and triangles, the library is a practical tool for basic geometric operations. However, there’s so much more potential on the horizon. Here’s a look at what’s next for GeoLib and how the open-source nature of the project plays a crucial role in its expansion.
 
-This project uses `/urara/` as the resource and article directory, and the initial structure looks like this:
+## Adding Support for More Shapes
 
-```
-.
-├── assets
-│   ├── any@180.png
-│   ├── any@192.png
-│   ├── any@512.png
-│   ├── maskable@192.png
-│   └── maskable@512.png
-├── favicon.png
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+One of the most exciting directions for GeoLib is the addition of support for more geometric shapes. Here’s a glimpse at what might be coming:
 
-Urara only processes Markdown files with the suffix `.md`, and does not process other files.
+Circles: Circles are another fundamental shape in geometry. Adding circle support would enable calculations of areas, circumferences, and diameters, as well as operations like scaling and comparing circles.
 
-> There is no difference between the `+page.svelte.md` and `+page.md` nomenclature, which is used only to mark whether the Svelte component is used.
+Polygons: Moving beyond basic shapes, polygons introduce a new level of complexity. Support for both regular and irregular polygons would allow users to calculate perimeters, areas, and even perform transformations like rotations and scaling.
 
-## Article Directory
+3D Shapes: Expanding into three-dimensional geometry is another possible future direction. Shapes like spheres, cubes, and pyramids could be added, bringing new use cases such as calculating volumes and surface areas.
 
-You can create any directory under the `/urara/` directory, and the directory containing the `.md` file will be processed as an article page.
+## Integration with Other Python Libraries
 
-```text {4,6,8}
-.
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+Another area of growth for GeoLib is integration with other popular Python libraries. By providing compatibility and working seamlessly with these libraries, GeoLib could become a key component in a broader ecosystem of Python tools.
 
-The above content will generate three pages after processing:
+Matplotlib: Integrating GeoLib with Matplotlib, a popular plotting library, would allow users to visualize the shapes and operations they’re working with.
 
-1. `example.com/hello-world/`
-2. `example.com/hello-world/elements/`
-3. `example.com/hello-world/toc-disabled/`
+##  Get Involved on GitHub
+One of the most exciting aspects of GeoLib is that it’s open source. This project thrives on community involvement, and we’re actively seeking contributors to help take GeoLib to the next level. Whether you’re an experienced developer or just getting started with open-source contributions, there’s a place for you in this project.
 
-You can create as many directories as you like, but note: **Do not store multiple `.md` files in the same directory.**
+Here’s how you can get involved:
 
-## Article Metadata
+`Fork the Repository`: Visit the GeoLib [Github Repository](https://github.com/iBz-04/GeoLib), fork it, and start working on your ideas. Whether you’re adding new shapes, improving documentation, or fixing bugs, every contribution helps.
 
-When writing, you will also need to write article metadata, an example of which is shown below:
+`Create Issues and Pull Requests`: If you have suggestions or encounter any issues, feel free to open an [Issue](https://github.com/iBz-04/GeoLib/issues) on GitHub. If you’ve implemented a new feature or made improvements, submit a pull request for review.
 
-```md
----
-title: 'Hello World' // title
-image: '/hello-world/urara.webp' // title image
-created: 2021-11-01 // create time
-updated: 2021-12-12 // update time
-published: 2021-11-04 // publish time
-tags: // label
-  - 'Hello World'
-  - 'Urara'
-flags: // custom flags
-  - unlisted // hide article on the home page
----
-```
+`Join the Discussion`: Engage with other developers in the [Community](https://github.com/iBz-04/GeoLib/discussions). Share your insights, ask questions, and collaborate on building something special.
 
-This project is compatible with the [**FFF Flavored Frontmatter**](https://fff.js.org/) specification, but not all variables can be used.
+By contributing to `GeoLib`, you’ll not only help the library grow, but you’ll also gain valuable experience working on a real-world Python project. We encourage developers of all levels to participate, contribute code, provide feedback, or even just share your thoughts.
 
-## Writing Format
-
-You can write articles using Markdown syntax, which is a lightweight markup language.
-
-If you have never heard of Markdown, you can learn the basic syntax at [**Basic Syntax | Markdown Guide**](https://www.markdownguide.org/basic-syntax/).
-
-This project is also compatible with some of Markdown's extended syntax: [**Extended Syntax | Markdown Guide**](https://www.markdownguide.org/extended-syntax/), and the following extended syntax is not available at this time.
-
-- [**Heading IDs**](https://www.markdownguide.org/extended-syntax/#heading-ids)
-- [**Definition Lists**](https://www.markdownguide.org/extended-syntax/#definition-lists)
-- [**Using Emoji Shortcodes**](https://www.markdownguide.org/extended-syntax/#using-emoji-shortcodes)
-- [**Highlight**](https://www.markdownguide.org/extended-syntax/#highlight)
-- [**Subscript**](https://www.markdownguide.org/extended-syntax/#subscript)
-- [**Superscript**](https://www.markdownguide.org/extended-syntax/#superscript)
-- [**Disabling Automatic URL Linking**](https://www.markdownguide.org/extended-syntax/#disabling-automatic-url-linking)
-
-## Inserting Media
-
-You can insert media content into your article via Markdown syntax or HTML code.
-
-When inserting media, pay attention to the directory where the media is stored, for example, to insert `urara.webp` in the following `hello-world` article:
-
-```text {5}
-.
-├── src
-└── urara
-    └── hello-world
-        ├── urara.webp
-        └── +page.svelte.md
-```
-
-When filling in the path, calculate the file path starting from the `urara` directory in the project:
-
-```md
-![image description](/hello-world/urara.webp)
-```
-
-## Svelte Components
-
-You can use Svelte components in your articles by simply importing them before use:
-
-```md
-<script>
-  import Component from '$lib/components/extra/component.svelte'
-</script>
-```
-
-Fill in the information according to the needs of the component at the time of use:
-
-```md
-<Component attribute="info"/>
-```
-
-This document also organizes the Svelte components that can be used in Urara: [**Article Components**](http://urara-docs.netlify.app/advanced/extension.html#article-component).

@@ -1,14 +1,16 @@
 # Deployment
 
-## GitHub Pages
+## UNDER DEVELOPMENT! 
+
+<!-- ## GitHub Pages
 
 This project comes with a GitHub Actions script that automatically generates a deployment file that runs after you commit your changes and then commits to the gh-pages branch.
 
 To use it, just set the GitHub Pages deployment branch to gh-pages.
 
-> If the GitHub Actions script does not run automatically after you commit your changes, check to see if there is another branch in your repository, or you can run the script manually.
+> If the GitHub Actions script does not run automatically after you commit your changes, check to see if there is another branch in your repository, or you can run the script manually. -->
 
-## Netlify
+<!-- ## Netlify
 
 This project comes with [**Build Profile**](https://github.com/importantimport/urara/blob/main/netlify.toml) for Netlify, so when importing the project, there is no need to fill in the build settings.
 
@@ -24,4 +26,4 @@ You can import projects from a public git repository, or to import a private Git
 
 Once you select a repository, Vercel automatically recognizes the repository and selects the appropriate schema without having to fill in the build and output settings.
 
-You can also add additional settings as needed, then deploy, and wait for the deployment to complete.
+You can also add additional settings as needed, then deploy, and wait for the deployment to complete. -->

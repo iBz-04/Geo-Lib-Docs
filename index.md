@@ -4,7 +4,7 @@ layout: home
 hero:
   name: GeoLib
   text: |
-    A geometry
+    a geometry
     Library
     Built with
     Python

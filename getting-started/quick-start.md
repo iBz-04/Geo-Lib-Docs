@@ -1,75 +1,45 @@
-# Quick Start
+# Installation
 
-## Fork
+To begin with GeoLib, ensure that `Python 3` is installed on your system,  visit : [Python official site](https://www.python.org/downloads/) to learn more about the python installation .
 
-You can use this template on GitHub without downloading it locally.
+## pip Installation
 
-Visit the [**importantimport/urara**](https://github.com/importantimport/urara) repository and click the GitHub, Vercel, or Netlify deploy button below.
+### Windows
 
-## Local Downloads
-
-### Node.js
-
-You must check that Node.js is installed on your computer before downloading.
+Download and run the get-pip.py script:
 
 ```bash
-node --version
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 ```
 
-If your computer does not have Node.js installed, you will need to [**download and complete the installation**](https://nodejs.org/zh-tw/download).
+### MacOS/Linux
 
-> For Windows users: make sure the **Add to PATH** option is checked (checked by default)
-
-### pnpm
-
-This item uses the [**pnpm**](https://pnpm.io/zh) package manager by default.
-
-Installed via npm.
+Download and run the get-pip.py script:
 
 ```bash
-npm i -g pnpm
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
 ```
 
-For other installation methods, please refer to the [**official documentation**](https://pnpm.io/zh/installation).
 
-### degit
+> Make sure `python` is added to your PATH.
 
-Use `degit` to download the template and install the dependency packages: 
+
+## GeoLib Installation
+
+You can install GeoLib directly from the `GitHub repository` by running the following command
+
 
 ```bash
-pnpm dlx degit importantimport/urara # Download to the current directory
-# or
-pnpm dlx degit importantimport/urara my-blog && cd my-blog # Create a new my-blog in the current directory and download it to that folder, then go to
-
-pnpm i # Install the dependency package
+pip install git+https://github.com/iBz-04/GeoLib.git
 ```
 
-## Run
+> Well done! you can now start using GeoLib!
 
-### Development
 
-Use `pnpm dev` to run the development server.
-
-```bash
-pnpm dev # http://localhost:3000
-pnpm dev -- --host 0.0.0.0 # http://0.0.0.0:3000
-pnpm dev -- --host 0.0.0.0 --port 8080 # http://0.0.0.0:8080
-```
-
-### Deployment
-
-This template uses `adapter-auto` by default and automatically falls back to `adapter-static` when no compatible environment is detected.
-
-Use `pnpm build` to generate the deployment file.
-
-```bash
-pnpm build
-```
-
-or to force the use of a specific adapter.
-
-```bash
-VERCEL=true pnpm build # adapter-vercel
-CF_PAGES=true # adapter-cloudflare-pages
-NETLIFY=true pnpm build # adapter-netlify
-```
+### Next 
+GeoLib provides an intuitive interface for working with geometric shapes. 
+Whether you're calculating areas and perimeters or scaling and comparing different shapes, GeoLib simplifies these tasks. 
+Below is an introduction to using GeoLib with examples of how to create and manipulate `squares` and `triangles`.
+> find out how to work with these shapes in the next sections

@@ -7,11 +7,11 @@
     "build": "vitepress build",
     "serve": "vitepress serve"
   },
-  "author": "藍",
-  "license": "WTFPL",
-  "repository": "importantimport/urara-docs",
-  "bugs": "https://github.com/importantimport/urara-docs/issues",
-  "homepage": "https://github.com/importantimport/urara-docs#readme",
+  "author": "iBz",
+  "license": "MIT",
+  "repository": "iBz-04/Geo-Lib-Docs",
+  "bugs": "https://github.com/iBz-04/Geo-Lib-Docs/issues",
+  "homepage": "https://github.com/iBz-04/Geo-Lib-Docs#readme",
   "devDependencies": {
     "@vite-pwa/vitepress": "^0.0.5",
     "flexsearch": "^0.7.31",

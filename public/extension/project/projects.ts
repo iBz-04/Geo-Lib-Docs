@@ -10,8 +10,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: 'urara',
-    name: 'Urara',
+    id: 'geolib-docs',
+    name: 'geolib-docs',
     tags: ['Svelte', 'TypeScript'],
     description:
       "🌸 Sweet, Powerful, IndieWeb-Compatible SvelteKit Blog Starter. [δ](Delta)",

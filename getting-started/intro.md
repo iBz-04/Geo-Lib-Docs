@@ -1,11 +1,11 @@
 # Intro
 
-Urara is a modern blog template based on SvelteKit.
+Welcome to the GeoLib documentation! This guide will walk you through the process of getting started with GeoLib
 
-## Features
+## Overview
 
-- Out of the box **Atom feed** (WebSub), **Sitemap**, **PWA** (Web app manifest & ServiceWorker) support.
-- Present beautiful interface designs and animations with [**daisyUI**](https://github.com/saadeghi/daisyui), of course.
-- Good [**IndieWeb**](https://indieweb.org/) Compatibility - Multi-kind posts with [**microformats2**](https://microformats.org/) markup content, Showcasing [**Webmentions**](https://indieweb.org/Webmention) via [**webmentions.io**](https://webmentions.io) API.
-- Don't worry about the article and image directories - just put them under a folder and they'll be [**copied automatically at build time**](https://github.com/importantimport/urara/blob/main/urara.ts).
-- [**Comment Components**](https://github.com/importantimport/urara/tree/main/src/lib/components/comments): Webmentions, Giscus, Utterances... u can use more than one.
+- This library was built with `@Python 3.12.5`
+
+- Geolib is useful for handling basic geometric shapes like squares and triangles, in future versions other shapes will be supported
+
+- This is an open-source project on github, meaning anyone can make a supervised contribution to make Geolib better
