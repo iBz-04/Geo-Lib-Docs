@@ -1,131 +1,96 @@
-# 配置
+# Kareler
 
-## 配置文件
+## Kare Örnekleri Oluşturma
 
-本项目使用 `/src/lib/config/` 作为配置文件目录，但多数配置在一般情况下无需修改。
+`Kareler` temel geometrik şekillerdir ve GeoLib, kare nesneleri oluşturmayı ve hesaplamalar yapmayı kolaylaştırır. Not: `#` işaretinden sonraki metinler sadece size yardımcı olmak için `yorumlar`dır ve bu nedenle orijinal kodun bir parçası değillerdir.
 
-### site.ts | 站点信息
+```python
+from geolib import Square
 
-```ts
-export const site: SiteConfig = {
-  protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://', // 协议（一般无需更改）
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app', // 域名
-  title: 'Urara', // 标题
-  subtitle: 'Sweet & Powerful SvelteKit Blog Template', // 副标题
-  lang: 'zh-CN', // 语言
-  descr: 'Powered by SvelteKit/Urara', // 描述
-  author: {
-    name: 'John Doe', // 作者名称
-    avatar: '/assets/maskable@512.png', // 作者图片
-    status: '🌸', // 作者状态
-    bio: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.' // 作者描述
-  },
-  themeColor: '#3D4451' // 主题颜色（目前仅用于 Manifest）
-}
+# Kenar uzunluğu 5 birim olan bir kare oluşturun
+square = Square(5)
+
+# Karenin özelliklerini yazdırın
+print(square)  # Çıktı: Square(side_length=5)
 ```
 
-### icon.ts | 图标
+### Kareler: alan ve çevre
+Bir Kare örneği oluşturduktan sonra, kolayca `alan` ve `çevre` hesaplayabilirsiniz:
 
-默认提供一些图标以兼容 Web app manifests 及现代浏览器，可以自行替换。
+```python
+# Karenin alanını ve çevresini hesaplayın
+print("Kare Alanı:", square.area)  # Çıktı: Kare Alanı: 25
+
+print("Kare Çevresi:", square.perimeter)  # Çıktı: Kare Çevresi: 20
 
 ```
-/urara/favicon.png - 网站图标，32x32
-/urara/assets/any@180.png - 网站图标，180x180
-/urara/assets/any@192.png - 网站 / Manifest 图标，192x192
-/urara/assets/any@512.png - Manifest 图标，512x512
-/urara/assets/manifest@192.png - Manifest 遮罩图标，192x192
-/urara/assets/manifest@512.png - Manifest 遮罩图标，512x512
+
+### Kareler: ölçekleme
+GeoLib ayrıca kareyi bir `faktör` ile `ölçekleme` yapmanıza olanak tanır:
+
+```python
+# Kareyi 2 faktörü ile ölçeklendirin
+square.scale(2)
+
+print("Yeni Kenar Uzunluğu:", square.side_length)  # Çıktı: Yeni Kenar Uzunluğu: 10
+
+
 ```
 
-也可以通过修改 `/src/lib/config/icon.ts` 替换图标数量及路径。
+### Üçgen Örnekleri Oluşturma
 
-### general.ts | 主题
+GeoLib, `üçgenleri` destekler ve alan hesaplaması gibi özellikler sunar, ayrıca üçgenin `dik üçgen` olup olmadığını kontrol eder. Önce bir üçgen örneği nasıl oluşturulacağını görelim:
 
-```ts
-export const theme: ThemeConfig = [
-  {
-    name: 'light', // 主题变量名
-    text: '🌕 Light' // 主题显示名，可随意修改
-  },
-  {
-    name: 'dark',
-    text: '🌑 Dark'
-  },
-]
+```python
+from geolib import Triangle
+
+# Kenar uzunlukları 3, 4 ve 5 birim olan bir üçgen oluşturun
+triangle = Triangle(3, 4, 5)
+
+# Üçgenin özelliklerini yazdırın
+print(triangle)  # Çıktı: Triangle(a=3, b=4, c=5)
+
+```
+### Üçgenler: alan ve çevre
+Bir Üçgen örneği oluşturduktan sonra, alan ve çevre hesaplamalarına geçebilirsiniz.
+
+```python
+# Üçgenin alanını ve çevresini hesaplayın
+print("Üçgen Alanı:", triangle.area)  # Çıktı: Üçgen Alanı: 6.0
+
+print("Üçgen Çevresi:", triangle.perimeter)  # Çıktı: Üçgen Çevresi: 12
+
 ```
 
-本项目使用了 [**daisyUI**](https://daisyui.com/) 主题，查看可用的 [**daisyUI 主题**](https://daisyui.com/docs/themes/?lang=zh_cn)。
+### Üçgenler: dik üçgen mi?
+GeoLib, bir üçgenin dik üçgen olup olmadığını kontrol etmek için bir yöntem içerir:
 
-### general.ts | 标题栏
+```python
+# Üçgenin dik üçgen olup olmadığını kontrol edin
+print("Üçgen dik üçgen mi?", triangle.is_right_angle())  # Çıktı: True
 
-```ts
-export const header: HeaderConfig = {
-  nav: [
-    {
-      text: 'Get Started', // 按钮名称
-      link: '/hello-world' // 指向的网页，可以填写其他网页
-    },
-    {
-      text: 'Elements',
-      link: '/hello-world/elements'
-    }
-  ]
-}
 ```
 
-还可以根据下面的格式在标题栏添加下拉菜单。
+## Şekilleri Karşılaştırma
+Bu kütüphane, şekilleri kolayca `karşılaştırmanıza` olanak tanır. İki kareyi veya iki üçgeni alanlarına veya `kenar uzunluklarına göre` karşılaştırabilirsiniz:
 
-```ts
-{
-   text: 'Hello World',
-   children: [
-     {
-      text: 'Get Started',
-      link: '/hello-world'
-     },
-     {
-       text: 'Elements',
-       link: '/hello-world/elements'
-     },
-	 {
-	   text: 'ToC Disabled',
-	   link: '/hello-world/toc-disabled'
-	 }
-   ]
-}
+```python
+
+# Kareleri karşılaştırma
+square1 = Square(4)
+square2 = Square(6)
+
+print(square1 == square2)  # Çıktı: False
+print(square1 < square2)   # Çıktı: True
+
+# Üçgenleri karşılaştırma
+triangle1 = Triangle(3, 4, 5)
+triangle2 = Triangle(5, 5, 8)
+
+print(triangle1 == triangle2)  # Çıktı: False
+print(triangle1 < triangle2)   # Çıktı: True
+
+
 ```
 
-### general.ts | 页脚
-
-大致与标题相同，下拉菜单除外。
-
-```ts
-export const footer: FooterConfig = {
-  nav: [
-    {
-      text: 'Feed', // 超链接名称
-      link: '/atom.xml' // 指向的页面，可以填写其他网页
-    },
-    {
-      text: 'Sitemap',
-      link: '/sitemap.xml'
-    }
-  ]
-}
-```
-
-### general.ts | 日期格式
-
-```ts
-export const date: DateConfig = {
-  locales: 'zh-CN', // 语言，可参考 IETF 语言标签
-  options: {
-    year: '2-digit', // 年份: numeric / 2-digit
-    weekday: 'long', // 星期: narrow / short / long
-    month: 'short', // 月份: numeric / 2-digit / narrow / short / long
-    day: 'numeric' // 日期: numeric / 2-digit
-  }
-}
-```
-
-要添加其他选项，请参考 [**Intl.DateTimeFormat - JavaScript | MDN**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)。
+> Bu kadar! (şimdilik :))

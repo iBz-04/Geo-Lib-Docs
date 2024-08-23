@@ -1,11 +1,11 @@
-# 介绍
+# Giriş
 
-Urara 是一个基于 SvelteKit 的现代博客模板。
+GeoLib belgelerine hoş geldiniz! Bu kılavuz, GeoLib ile başlamanız için sizi adım adım yönlendirecek.
 
-## 特征
+## Genel Bakış
 
-- 开箱即用的 **Atom feed** (WebSub), **Sitemap**, **PWA** (Web app manifest & ServiceWorker) 支持。
-- 使用 [**daisyUI**](https://github.com/saadeghi/daisyui) 呈现精美的界面设计和动画效果，当然。
-- 良好的 [**IndieWeb**](https://indieweb.org/) 兼容性 - 支持带有 [**microformats2**](https://microformats.org/) 标签的多种文章类型，通过 [**webmentions.io**](https://webmentions.io) API 展示 [**Webmentions**](https://indieweb.org/Webmention)。
-- 不用担心文章和图像目录 - 只要把它们放在一个文件夹下，它们就会在[**构建时自动复制**](https://github.com/importantimport/urara/blob/main/urara.ts)。
-- [**评论组件**](https://github.com/importantimport/urara/tree/main/src/lib/components/comments)： Webmentions、 Giscus、 Utterances... 你可以使用不止一个。
+- Bu kütüphane `@Python 3.12.5` ile oluşturulmuştur.
+
+- GeoLib, kareler ve üçgenler gibi temel geometrik şekillerle çalışmak için kullanışlıdır; gelecekte diğer şekiller de desteklenecektir.
+
+- Bu, GitHub'da açık kaynaklı bir projedir, yani herkes GeoLib'i daha iyi hale getirmek için denetimli katkılarda bulunabilir.

@@ -4,16 +4,16 @@ layout: home
 hero:
   name: Geolib
   text: |
-    甜蜜且
-    强大的
-    SvelteKit
-    博客模板
-  image: /assets/any@192.png
+    Python ile 
+    Yapılmış Bir
+    Geometri
+    Kütüphanesidir
+  image: /assets/Geolib_logo.jpeg
   actions:
     - theme: brand
-      text: 开始
+      text: Başlayın
       link: /zh-hans/getting-started/intro
     - theme: alt
-      text: 在 GitHub 上查看
-      link: https://github.com/importantimport/urara
+      text: GitHub'da Görüntüle
+      link: https://github.com/iBz-04/GeoLib
 ---

@@ -1,126 +1,34 @@
-# 写作
+# GeoLib'i Genişletme
 
-## 资源目录
+`GeoLib`, Python'da geometrik şekillerle çalışmak için sağlam bir temel oluşturmuştur. Şu anda odaklanılan kareler ve üçgenlerle birlikte, bu kütüphane temel geometrik işlemler için pratik bir araçtır. Ancak, ufukta çok daha fazla potansiyel var. İşte GeoLib'in gelecekteki yönü ve projenin açık kaynak doğasının genişlemedeki rolü hakkında bir bakış.
 
-本项目使用 `/urara/` 作为资源与文章目录，初始结构看上去像这样：
+## Daha Fazla Şekil Desteği Ekleme
 
-```
-.
-├── assets
-│   ├── any@180.png
-│   ├── any@192.png
-│   ├── any@512.png
-│   ├── maskable@192.png
-│   └── maskable@512.png
-├── favicon.png
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+GeoLib için en heyecan verici yönlerden biri, daha fazla geometrik şekil desteği eklemektir. İşte neler gelebileceğine dair bir bakış:
 
-Urara 仅处理后缀名为 `.md` 的 Markdown 文件，不会对其他文件进行处理。
+**Daireler:** Daireler, geometride bir diğer temel şekildir. Daire desteği eklemek, alanların, çevrelerin ve çapların hesaplanmasını sağlayacak, ayrıca daireleri ölçeklendirme ve karşılaştırma gibi işlemleri mümkün kılacaktır.
 
-> `+page.svelte.md` 与 `+page.md` 命名方式并无差别，仅用于标记是否使用了 Svelte 组件。
+**Çokgenler:** Temel şekillerin ötesine geçmek, çokgenler yeni bir karmaşıklık seviyesi getirir. Hem düzgün hem de düzensiz çokgenler için destek, kullanıcıların çevreleri, alanları hesaplamalarına ve dönüşümler gibi işlemleri gerçekleştirmelerine olanak tanıyacaktır.
 
-## 文章目录
+**3D Şekiller:** Üç boyutlu geometriye genişlemek, gelecekteki bir yön olabilir. Küreler, küpler ve piramitler gibi şekiller eklenebilir, hacimlerin ve yüzey alanlarının hesaplanması gibi yeni kullanım durumları sunabilir.
 
-您可以在 `/urara/` 目录下创建任意目录，包含 `.md` 文件的目录会被处理为文章页面。
+## Diğer Python Kütüphaneleri ile Entegrasyon
 
-```text {4,6,8}
-.
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+GeoLib için bir diğer büyüme alanı, diğer popüler Python kütüphaneleri ile entegrasyon olabilir. Bu kütüphanelerle uyumlu çalışarak, GeoLib daha geniş bir Python araçları ekosisteminde önemli bir bileşen haline gelebilir.
 
-以上内容在经过处理后，会生成三个页面：
+**Matplotlib:** GeoLib'in, popüler bir grafik kütüphanesi olan Matplotlib ile entegrasyonu, kullanıcıların çalıştıkları şekilleri ve işlemleri görselleştirmelerini sağlayacaktır.
 
-1. `example.com/hello-world/`
-2. `example.com/hello-world/elements/`
-3. `example.com/hello-world/toc-disabled/`
+## GitHub'da Katkıda Bulunun
 
-您可以根据想法随意创建目录，但注意：**请勿在同一目录下存放多个 `.md` 文件。**
+GeoLib'in en heyecan verici yönlerinden biri açık kaynak olmasıdır. Bu proje, topluluk katılımına dayanır ve GeoLib'i bir sonraki seviyeye taşımak için katkıda bulunacak kişileri aktif olarak arıyoruz. İster deneyimli bir geliştirici olun, ister açık kaynak katkılarıyla yeni başlıyor olun, bu projede yeriniz var.
 
-## 文章元数据
+Katkıda bulunmanın yolları şunlardır:
 
-在写作时，您还需要编写文章元数据，下方是一个示例：
+**Depoyu Çatallayın:** GeoLib [GitHub Deposu](https://github.com/iBz-04/GeoLib) sayfasını ziyaret edin, çatallayın ve fikirleriniz üzerinde çalışmaya başlayın. Yeni şekiller eklerken, dokümantasyonu geliştirirken veya hataları düzeltirken, her katkı yardımcı olur.
 
-```md
----
-title: 'Hello World' // 标题
-image: '/hello-world/urara.webp' // 题图
-created: 2021-11-01 // 创建时间
-updated: 2021-12-12 // 更新时间
-publish: 2021-11-04 // 发布时间
-tags: // 标签
-  - 'Hello World'
-  - 'Urara'
-flags: // 自定义标记
-  - unlisted // 在主页隐藏此文章
----
-```
+**Sorunlar ve Çekme İstekleri Oluşturun:** Önerileriniz varsa veya herhangi bir sorunla karşılaşırsanız, GitHub'da bir [Sorun](https://github.com/iBz-04/GeoLib/issues) açabilirsiniz. Yeni bir özellik eklediyseniz veya iyileştirmeler yaptıysanız, gözden geçirme için bir çekme isteği gönderin.
 
-本项目兼容 [**FFF Flavored Frontmatter**](https://fff.js.org/) 规范，但并非所有变量都可以使用。
+**Tartışmalara Katılın:** Diğer geliştiricilerle [Topluluk](https://github.com/iBz-04/GeoLib/discussions) içinde etkileşimde bulunun. İçgörülerinizi paylaşın, sorular sorun ve özel bir şeyler inşa etme konusunda işbirliği yapın.
 
-## 写作格式
+`GeoLib`'e katkıda bulunarak, kütüphanenin büyümesine yardımcı olmanın yanı sıra, gerçek dünya Python projelerinde değerli deneyimler kazanacaksınız. Tüm seviyelerde geliştiricileri katılmaya, kod katkılarında bulunmaya, geri bildirimde bulunmaya veya sadece düşüncelerinizi paylaşmaya teşvik ediyoruz.
 
-您可以使用 Markdown 语法来撰写文章，这是一种轻量级标记语言。
-
-从未听说过此语法？您可以前往 [**Basic Syntax | Markdown Guide**](https://www.markdownguide.org/basic-syntax/) 学习基本语法。
-
-本项目也同样兼容部分 Markdown 扩展语法：[**Extended Syntax | Markdown Guide**](https://www.markdownguide.org/extended-syntax/)，下方列出了暂不可用的拓展语法：
-
-- [**Heading IDs**](https://www.markdownguide.org/extended-syntax/#heading-ids)
-- [**Definition Lists**](https://www.markdownguide.org/extended-syntax/#definition-lists)
-- [**Using Emoji Shortcodes**](https://www.markdownguide.org/extended-syntax/#using-emoji-shortcodes)
-- [**Highlight**](https://www.markdownguide.org/extended-syntax/#highlight)
-- [**Subscript**](https://www.markdownguide.org/extended-syntax/#subscript)
-- [**Superscript**](https://www.markdownguide.org/extended-syntax/#superscript)
-- [**Disabling Automatic URL Linking**](https://www.markdownguide.org/extended-syntax/#disabling-automatic-url-linking)
-
-## 插入媒体
-
-您可以通过 Markdown 语法或 HTML 代码在文章中插入媒体内容。
-
-当插入媒体时，需要注意存放媒体的目录，例如您想在下方的 `hello-world` 文章中插入 `urara.webp`：
-
-```text {5}
-.
-├── src
-└── urara
-    └── hello-world
-        ├── urara.webp
-        └── +page.svelte.md
-```
-
-填写路径时，请从项目中的 `urara` 目录开始计算文件路径：
-
-```md
-![图片描述](/hello-world/urara.webp)
-```
-
-## Svelte 组件
-
-您可以在文章中使用 Svelte 组件，仅需在使用前导入组件：
-
-```md
-<script>
-  import Component from '$lib/components/extra/component.svelte'
-</script>
-```
-
-在使用时根据组件的需求填入信息：
-
-```md
-<Component attribute="info"/>
-```
-
-本文档同样整理了可用于 Urara 的 Svelte 组件：[**文章组件**](http://urara-docs.netlify.app/zh-hans/advanced/extension.html#文章组件)。

@@ -1,6 +1,6 @@
 # Expanding GeoLib
 
-GeoLib has laid a strong foundation for working with geometric shapes in Python. With the current focus on squares and triangles, the library is a practical tool for basic geometric operations. However, there’s so much more potential on the horizon. Here’s a look at what’s next for GeoLib and how the open-source nature of the project plays a crucial role in its expansion.
+`GeoLib` has laid a strong foundation for working with geometric shapes in Python. With the current focus on squares and triangles, the library is a practical tool for basic geometric operations. However, there’s so much more potential on the horizon. Here’s a look at what’s next for GeoLib and how the open-source nature of the project plays a crucial role in its expansion.
 
 ## Adding Support for More Shapes
 
