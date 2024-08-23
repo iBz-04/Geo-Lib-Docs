@@ -1,46 +1,34 @@
-# Extensions
+# Credits
 
-It is people like you who bring extension plugins to this project, and the following lists the extensions that have been included in this document.
+## Developers
 
-## Article Components
+[@Ibrahim](https://github.com/iBz-04)
 
-### SvelteKit Embed
+[@Arda](https://github.com/cyrekWei)
 
-#### Demo and Usage - [sveltekit-embed.vercel.app](https://sveltekit-embed.vercel.app/)
+## Contributors
 
-**⚠ SvelteKit Embed has replaced the previous similar components, please refer to the latest usage method.**
+> Contributors will be acknowledged here
 
-### Alert
 
-#### Made by [藍+85CD](https://github.com/kwaa) | Demo - [Seviche.cc](https://seviche.cc/2022-12-20-pleroma-mod/)
+### License
+
+GeoLib is licensed under the [MIT](https://github.com/iBz-04/GeoLib?tab=MIT-1-ov-file) license. We encourage contributions and collaboration from the community.
+
+Repository:
+[Link to GeoLib GitHub repository]
+
+
 
 <details>
-  <summary>Configuration</summary>
-  
-  **✅ This extension is included in Urara, no additional download is needed.**
+  <summary>Repository</summary>
 
-  #### Components to be imported before use:
-
-  ```md
-  <script>
-    import Alert from '$lib/components/extra/alert.svelte'
-  </script>
-  ```
-
-  #### Usage:
-
-  ```md
-  <Alert status="warning" description="warning message" title="warning title"/>
-  ```
-
-  You can modify the status of the prompt as needed. The available options are: `info`, `success`, `warning` and `error`.
-
-  You can also refer to the use case source code: [**Urara-Blog/+page.svelte.md at main · Sevichecc/Urara-Blog**](https://github.com/Sevichecc/Urara-Blog/blob/main/urara/2022-12-20-pleroma-mod/+page.svelte.md?plain=1#L12).
-
+  [Take me to GitHub](https://github.com/iBz-04/GeoLib)
 </details>
 
 
-### Profile Card
+
+<!-- ### Profile Card
 
 #### Made by [藍+85CD](https://github.com/kwaa) | Demo - [./kwaa.dev](https://kwaa.dev/about#关于我)
 
@@ -49,7 +37,7 @@ It is people like you who bring extension plugins to this project, and the follo
   
   **⚠ This extension is not yet included in Urara, you need to download the component manually.**
 
-  Download the [**profile.svelte**](https://github.com/importantimport/urara-docs/raw/master/public/extension/profile/profile.svelte) file and put it in the `src/lib/components/extra/` directory.
+  Download the [**profile.svelte**](https://github.com/iBz-04/GeoLib) file and put it in the `src/lib/components/extra/` directory.
 
   #### Components to be imported before use:
 
@@ -394,4 +382,4 @@ It is people like you who bring extension plugins to this project, and the follo
 
   You can also refer to the use case source code: [**Urara-Blog/projects.ts at main · Sevichecc/Urara-Blog**](https://github.com/Sevichecc/Urara-Blog/blob/main/src/lib/config/projects.ts#L11).
 
-</details>
+</details> -->

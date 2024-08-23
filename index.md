@@ -15,5 +15,5 @@ hero:
       link: /getting-started/intro
     - theme: alt
       text: View on GitHub
-      link: https://github.com/iBz-04/Geo-Lib-Docs
+      link: https://github.com/iBz-04/GeoLib
 ---

@@ -4,7 +4,7 @@ import { withPwa } from '@vite-pwa/vitepress'
 const nav = (_lang, index) => [
   {
     text: ['Discussions', '討論', '', '讨论'][index],
-    link: 'https://github.com/importantimport/urara/discussions',
+    link: 'https://github.com/iBz-04/GeoLib/discussions',
   },
 ]
 
@@ -32,17 +32,17 @@ const sidebar = (lang, index) => [
         link: lang + 'getting-started/writing',
       },
       {
-        text: ['Deploy', '部署', '配備', '部署'][index],
+        text: ['Next steps', '部署', '配備', '部署'][index],
         link: lang + 'getting-started/deploy',
       },
     ],
   },
   {
-    text: ['Advanced', '進階', '高度な', '进阶'][index],
+    text: ['More', '進階', '高度な', '进阶'][index],
     collapsible: true,
     items: [
       {
-        text: ['Extension', '拓展', '拡張', '拓展'][index],
+        text: ['Credits', '拓展', '拡張', '拓展'][index],
         link: lang + 'advanced/extension',
       },
     ],
@@ -53,7 +53,7 @@ const themeConfig = (lang, index) => ({
   sidebar: sidebar(lang, index),
   nav: nav(lang, index),
   editLink: {
-    pattern: 'https://github.com/importantimport/urara-docs/edit/main/:path',
+    pattern: 'https://github.com/iBz-04/Geo-Lib-Docs/edit/main/:path',
     text: [
       'Edit on GitHub',
       '在 GitHub 上編輯',
@@ -110,7 +110,7 @@ export default withPwa(
     },
     themeConfig: {
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/importantimport/urara' },
+        { icon: 'github', link: 'https://github.com/iBz-04/GeoLib' },
       ],
     },
     pwa: {
