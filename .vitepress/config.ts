@@ -88,7 +88,7 @@ export default withPwa(
         },
       ],
     ],
-    description: 'Sweet & Powerful SvelteKit Blog Template.',
+    description: 'A geometry library built with python.',
     markdown: { lineNumbers: true },
     locales: {
       root: {
@@ -104,7 +104,7 @@ export default withPwa(
       // ja: { lang: 'ja-JP', label: '日本語', themeConfig: themeConfig('/ja/', 2) }
       'zh-hans': {
         lang: 'zh-Hans',
-        label: '简体中文',
+        label: 'Türkçe',
         themeConfig: themeConfig('/zh-hans/', 3),
       },
     },
@@ -115,9 +115,9 @@ export default withPwa(
     },
     pwa: {
       manifest: {
-        name: 'Urara',
-        short_name: 'Urara',
-        description: 'Sweet & Powerful SvelteKit Blog Template.',
+        name: 'Geolib',
+        short_name: 'Geolib',
+        description: 'A geometry library built with python',
         theme_color: '#ffffff',
         icons: [
           {

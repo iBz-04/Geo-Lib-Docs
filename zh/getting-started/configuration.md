@@ -1,130 +1,93 @@
-# 配置
+# 正方形
 
-## 配置文件
+## 创建正方形实例
 
-本項目使用 `/src/lib/config/` 作爲配置文件目錄，但多數配置在一般情況下無需修改。
+`正方形`是基本的几何形状，GeoLib使得创建正方形对象并进行计算变得简单。注意：`#`符号后的文本只是`注释`，用于帮助您，因此不是原始代码的一部分。
 
-### site.ts | 網站信息
+```python
+from geolib import Square
 
-```ts
-export const site: SiteConfig = {
-  protocol: import.meta.env.URARA_SITE_PROTOCOL ?? import.meta.env.DEV ? 'http://' : 'https://', // 協議（一般無需更改）
-  domain: import.meta.env.URARA_SITE_DOMAIN ?? 'urara-demo.netlify.app', // 域名
-  title: 'Urara', // 標題
-  subtitle: 'Sweet & Powerful SvelteKit Blog Template', // 副標題
-  lang: 'zh-TW', // 語言
-  descr: 'Powered by SvelteKit/Urara', // 描述
-  author: {
-    name: 'John Doe', // 作者名稱
-    avatar: '/assets/maskable@512.png', // 作者圖片
-    status: '🌸', // 作者狀態
-    bio: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.' // 作者描述
-  },
-  themeColor: '#3D4451' // 主題顔色（目前僅用於 Manifest）
-}
+# 创建一个边长为5单位的正方形
+square = Square(5)
+
+# 打印正方形的属性
+print(square)  # 输出: Square(side_length=5)
 ```
 
-### icon.ts | 圖示
+### 正方形：面积和周长
+创建正方形实例后，您可以轻松计算其面积和周长。
 
-默認提供一些圖示以兼容 Web app manifests 及現代瀏覽器，可以自行替換。
+```python
+# 计算正方形的面积和周长
+print("Square Area:", square.area)  # 输出: Square Area: 25
+
+print("Square Perimeter:", square.perimeter)  # 输出: Square Perimeter: 20
 
 ```
-/urara/favicon.png - 網站圖示，32x32
-/urara/assets/any@180.png - 網站圖示，180x180
-/urara/assets/any@192.png - 網站 / Manifest 圖示，192x192
-/urara/assets/any@512.png - Manifest 圖示，512x512
-/urara/assets/manifest@192.png - Manifest 遮罩圖示，192x192
-/urara/assets/manifest@512.png - Manifest 遮罩圖示，512x512
+
+### 正方形：缩放
+GeoLib还允许您通过因子对正方形进行缩放：
+
+```python
+# 将正方形按因子2进行缩放
+square.scale(2)
+
+print("New Side Length:", square.side_length)  # 输出: New Side Length: 10
+
 ```
 
-也可以通過修改 `/src/lib/config/icon.ts` 替換圖示數量及路徑。
+## 创建三角形实例
+GeoLib支持三角形，提供了如使用海龙公式计算面积和检查三角形是否为直角三角形等功能。首先让我们看看如何创建三角形实例：
 
-### general.ts | 主題
+```python
+from geolib import Triangle
 
-```ts
-export const theme: ThemeConfig = [
-  {
-    name: 'light', // 主題變量名
-    text: '🌕 Light' // 主題顯示名，可修改
-  },
-  {
-    name: 'dark',
-    text: '🌑 Dark'
-  },
-]
+# 创建一个边长为3、4和5单位的三角形
+triangle = Triangle(3, 4, 5)
+
+# 打印三角形的属性
+print(triangle)  # 输出: Triangle(a=3, b=4, c=5)
+
 ```
 
-本項目使用了 [**daisyUI**](https://daisyui.com/) 主題，查看可用的 [**daisyUI 主題**](https://daisyui.com/docs/themes/?lang=zh_tw)。
+### 三角形：面积和周长
+创建三角形实例后，您可以计算其面积和周长。
 
-### general.ts | 標題欄
+```python
+# 计算三角形的面积和周长
+print("Triangle Area:", triangle.area)  # 输出: Triangle Area: 6.0
 
-```ts
-export const header: HeaderConfig = {
-  nav: [
-    {
-      text: 'Get Started', // 按鈕名稱
-      link: '/hello-world' // 指向的頁面，可以填寫其他網站
-    },
-    {
-      text: 'Elements',
-      link: '/hello-world/elements'
-    }
-  ]
-}
-```
-還可以根據下面的格式在標題欄添加下拉選單。
+print("Triangle Perimeter:", triangle.perimeter)  # 输出: Triangle Perimeter: 12
 
-```ts
-{
-   text: 'Hello World',
-   children: [
-     {
-      text: 'Get Started',
-      link: '/hello-world'
-     },
-     {
-       text: 'Elements',
-       link: '/hello-world/elements'
-     },
-	 {
-	   text: 'ToC Disabled',
-	   link: '/hello-world/toc-disabled'
-	 }
-   ]
-}
 ```
 
-### general.ts | 頁腳
+### 三角形：是否为直角三角形？
+GeoLib包括一个方法来检查三角形是否为直角三角形：
 
-大致與標題相同，下拉選單除外。
+```python
+# 检查三角形是否为直角三角形
+print("Is the triangle right-angled?", triangle.is_right_angle())  # 输出: True
 
-```ts
-export const footer: FooterConfig = {
-  nav: [
-    {
-      text: 'Feed', // 超連結名稱
-      link: '/atom.xml' // 指向的頁面，可以填寫其他網站
-    },
-    {
-      text: 'Sitemap',
-      link: '/sitemap.xml'
-    }
-  ]
-}
 ```
 
-### general.ts | 日期格式
+## 比较形状
+此库允许您轻松比较形状。 您可以根据面积或边长比较两个正方形或两个三角形：
 
-```ts
-export const date: DateConfig = {
-  locales: 'zh-TW', // 語言，可參考 IETF 語言標籤
-  options: {
-    year: '2-digit', // 年份: numeric / 2-digit
-    weekday: 'long', // 星期: narrow / short / long
-    month: 'short', // 月份: numeric / 2-digit / narrow / short / long
-    day: 'numeric' // 日期: numeric / 2-digit
-  }
-}
+```python 
+# 比较正方形
+square1 = Square(4)
+square2 = Square(6)
+
+print(square1 == square2)  # 输出: False
+print(square1 < square2)   # 输出: True
+
+# 比较三角形
+triangle1 = Triangle(3, 4, 5)
+triangle2 = Triangle(5, 5, 8)
+
+print(triangle1 == triangle2)  # 输出: False
+print(triangle1 < triangle2)   # 输出: True
+
 ```
 
-要添加更多選項，請參考 [**Intl.DateTimeFormat - JavaScript | MDN**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)。
+> 就这些！(暂时 :))

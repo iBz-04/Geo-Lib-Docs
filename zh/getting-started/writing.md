@@ -1,126 +1,34 @@
-# 寫作
+# 扩展GeoLib
 
-## 資源目錄
+GeoLib已经为在Python中处理几何形状奠定了坚实的基础。当前专注于正方形和三角形，该库是执行基本几何操作的实用工具。然而，未来还有更多潜力。以下是GeoLib未来的方向以及开源项目如何在扩展中发挥关键作用。
 
-本項目使用 `/urara/` 作為資源與文章目錄，初始結構看上去像這樣：
+## 添加对更多形状的支持
 
-```
-.
-├── assets
-│   ├── any@180.png
-│   ├── any@192.png
-│   ├── any@512.png
-│   ├── maskable@192.png
-│   └── maskable@512.png
-├── favicon.png
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+GeoLib最令人兴奋的方向之一是增加对更多几何形状的支持。以下是可能的未来发展：
 
-Urara 僅處理后綴名為 `.md` 的 Markdown 文件，不會對其他文件進行處理。
+- 圆形：圆形是几何学中的另一个基本形状。添加对圆形的支持将使计算面积、周长和直径成为可能，还可以进行如缩放和比较圆形等操作。
 
-> `+page.svelte.md` 與 `+page.md` 命名方式並無差別，僅用於標記是否使用了 Svelte 組件。
+- 多边形：超越基本形状，多边形引入了新的复杂性。支持规则和不规则多边形将允许用户计算周长、面积，甚至进行如旋转和缩放等变换操作。
 
-## 文章目錄
+- 3D形状：扩展到三维几何是另一个可能的未来方向。可以添加像球体、立方体和金字塔这样的形状，带来如计算体积和表面积的新用例。
 
-您可以在 `/urara/` 目錄下創建任意目錄，包含 `.md` 文件的目錄會被處理為文章頁面。
+## 与其他Python库的集成
 
-```text {4,6,8}
-.
-└── hello-world
-    ├── elements
-    │   └── +page.svelte.md
-    ├── toc-disabled
-    │   └── +page.md
-    ├── urara.webp
-    └── +page.svelte.md
-```
+GeoLib的另一个增长领域是与其他流行的Python库的集成。通过提供兼容性并与这些库无缝配合，GeoLib可以成为Python工具更广泛生态系统中的关键组件。
 
-以上內容在經過處理後，會生成三個頁面：
+- Matplotlib：将GeoLib与流行的绘图库Matplotlib集成，将使用户能够可视化他们正在处理的形状和操作。
 
-1. `example.com/hello-world/`
-2. `example.com/hello-world/elements/`
-3. `example.com/hello-world/toc-disabled/`
+## 参与GitHub项目
 
-您可以根據想法隨意創建目錄，但注意：**請勿在同一目錄下存放多個 `.md` 檔案。**
+GeoLib最令人兴奋的方面之一是它是开源的。这个项目依赖于社区的参与，我们积极寻找贡献者来帮助将GeoLib提升到新的水平。无论您是经验丰富的开发者还是刚刚开始进行开源贡献，都可以在这个项目中找到您的位置。
 
-## 文章元数据
+以下是您可以参与的方式：
 
-在寫作時，您還需要編寫文章元數據，下方是一個示例：
+- `Fork the Repository`：访问GeoLib [Github Repository](https://github.com/iBz-04/GeoLib)，将其fork下来，并开始进行您的想法。无论您是在添加新形状、改进文档还是修复错误，每一个贡献都有帮助。
 
-```md
----
-title: 'Hello World' // 標題
-image: '/hello-world/urara.webp' // 題圖
-created: 2021-11-01 // 創建時間
-updated: 2021-12-12 // 更新時間
-publish: 2021-11-04 // 發佈時間
-tags: // 標籤
-  - 'Hello World'
-  - 'Urara'
-flags: // 自定義標記
-  - unlisted // 在主頁隱藏此文章
----
-```
+- `Create Issues and Pull Requests`：如果您有建议或遇到任何问题，请随时在GitHub上打开一个 [Issue](https://github.com/iBz-04/GeoLib/issues)。如果您实现了新功能或进行了改进，请提交拉取请求进行审查。
 
-本項目與 [**FFF Flavored Frontmatter**](https://fff.js.org/) 規範相容，但並非所有變數都可以使用。
+- `Join the Discussion`：在 [Community](https://github.com/iBz-04/GeoLib/discussions) 中与其他开发者互动。分享您的见解，提出问题，并合作建设一些特别的东西。
 
-## 寫作格式
+通过为`GeoLib`做出贡献，您不仅会帮助库的成长，还将获得在真实Python项目中工作的宝贵经验。我们鼓励各级开发者参与，贡献代码、提供反馈，或仅仅分享您的想法。
 
-您可以使用 Markdown 語法來撰寫文章，這是一種轻量级標記語言。
-
-從未聽說過此語法？您可以前往 [**Basic Syntax | Markdown Guide**](https://www.markdownguide.org/basic-syntax/) 學習基本語法。
-
-本項目也同樣與部分 Markdown 擴展語法相容：[**Extended Syntax | Markdown Guide**](https://www.markdownguide.org/extended-syntax/)，下方列出了暫不可用的拓展語法：
-
-- [**Heading IDs**](https://www.markdownguide.org/extended-syntax/#heading-ids)
-- [**Definition Lists**](https://www.markdownguide.org/extended-syntax/#definition-lists)
-- [**Using Emoji Shortcodes**](https://www.markdownguide.org/extended-syntax/#using-emoji-shortcodes)
-- [**Highlight**](https://www.markdownguide.org/extended-syntax/#highlight)
-- [**Subscript**](https://www.markdownguide.org/extended-syntax/#subscript)
-- [**Superscript**](https://www.markdownguide.org/extended-syntax/#superscript)
-- [**Disabling Automatic URL Linking**](https://www.markdownguide.org/extended-syntax/#disabling-automatic-url-linking)
-
-## 插入媒體
-
-您可以通過 Markdown 語法或 HTML 程式碼在文章中插入媒體內容。
-
-當插入媒體時，需要注意存放媒體的目錄，例如您想在下方的 `hello-world` 文章中插入 `urara.webp`：
-
-```text {5}
-.
-├── src
-└── urara
-    └── hello-world
-        ├── urara.webp
-        └── +page.svelte.md
-```
-
-填寫路徑時，請從項目中的`urara`目錄開始計算檔案路徑：
-
-```md
-![圖片描述](/hello-world/urara.webp)
-```
-
-## Svelte 組件
-
-您可以在文章中使用 Svelte 組件，僅需在使用前導入組件：
-
-```md
-<script>
-  import Component from '$lib/components/extra/component.svelte'
-</script>
-```
-
-在使用時根據組件的需求填入訊息：
-
-```md
-<Component attribute="info"/>
-```
-
-本檔案同樣整理了可用於 Urara 的 Svelte 組件：[**文章組件**](https://urara-docs.netlify.app/zh/advanced/extension.html#文章組件)。

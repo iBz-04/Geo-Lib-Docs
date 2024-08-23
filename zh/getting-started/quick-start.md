@@ -1,75 +1,40 @@
-# 快速開始
+# 安装
 
-## 分叉
+要开始使用GeoLib，请确保您的系统上已安装`Python 3`，访问: [Python官方站点](https://www.python.org/downloads/)了解更多关于Python安装的信息。
 
-你可以在 GitHub 使用此模板而無需下載到本地。
+## pip安装
 
-訪問 [**importantimport/urara**](https://github.com/importantimport/urara) 存儲庫，并點擊下面的 GitHub, Vercel 或 Netlify 部署按鈕。
+### Windows
 
-## 本地下載
-
-### Node.js
-
-在下載前你必須先檢查你的電腦是否已經安裝 Node.js。
+下载并运行get-pip.py脚本：
 
 ```bash
-node --version
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 ```
 
-如果你的電腦未安裝 Node.js，則需要[**下載並完成安裝**](https://nodejs.org/zh-tw/download)。
+### MacOS/Linux
 
-> 對於 Windows 用戶：請確保勾選 **Add to PATH** 選項（默認已勾選）
-
-### pnpm
-
-本項目默認使用 [**pnpm**](https://pnpm.io/zh) 包管理器。
-
-通過 npm 安裝：
+下载并运行get-pip.py脚本：
 
 ```bash
-npm i -g pnpm
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py
 ```
+> 确保python已添加到您的PATH中。
 
-其他安裝方式請參考[**官方文檔**](https://pnpm.io/zh/installation)。
+## GeoLib安装
 
-### degit
-
-使用 `degit` 下載模板，并安裝依賴包：
+您可以通过运行以下命令直接从GitHub仓库安装GeoLib：
 
 ```bash
-pnpm dlx degit importantimport/urara # 下載到當前目錄
-# 或者
-pnpm dlx degit importantimport/urara my-blog && cd my-blog # 在當前目錄新建 my-blog 并下載到該文件夾，然後進入
+pip install git+https://github.com/iBz-04/GeoLib.git
 
-pnpm i # 安裝依賴包
 ```
+> 做得好！您现在可以开始使用GeoLib了！
 
-## 運行
+### 下一步
 
-### 開發
+GeoLib为处理几何形状提供了直观的界面。 无论是计算面积和周长，还是缩放和比较不同的形状，GeoLib都简化了这些任务。 下面是使用GeoLib的介绍，以及如何创建和操作squares和triangles的示例。
 
-使用 `pnpm dev` 運行開發服務器：
-
-```bash
-pnpm dev # http://localhost:3000
-pnpm dev -- --host 0.0.0.0 # http://0.0.0.0:3000
-pnpm dev -- --host 0.0.0.0 --port 8080 # http://0.0.0.0:8080
-```
-
-### 部署
-
-此模板默認使用 `adapter-auto`，當未檢測到兼容環境時自動回退到 `adapter-static`。
-
-使用 `pnpm build` 生成部署文件：
-
-```bash
-pnpm build
-```
-
-或强制使用特定的適配器：
-
-```bash
-VERCEL=true pnpm build # adapter-vercel
-CF_PAGES=true # adapter-cloudflare-pages
-NETLIFY=true pnpm build # adapter-netlify
-```
+> 请在接下来的章节中了解如何处理这些形状
