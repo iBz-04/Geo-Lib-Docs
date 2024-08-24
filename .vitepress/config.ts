@@ -84,7 +84,7 @@ export default withPwa(
         {
           src: 'https://plausible.kwaa.dev/js/plausible.js',
           defer: '',
-          'data-domain': 'main--geolib-docs.netlify.app',
+          'data-domain': 'urara-docs.netlify.app',
         },
       ],
     ],
