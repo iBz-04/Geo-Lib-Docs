@@ -3,7 +3,7 @@ import { withPwa } from '@vite-pwa/vitepress'
 
 const nav = (_lang, index) => [
   {
-    text: ['Discussions', '討論', '', '讨论'][index],
+    text: ['Discussions', '討論', '', 'tartışmalar'][index],
     link: 'https://github.com/iBz-04/GeoLib/discussions',
   },
 ]
