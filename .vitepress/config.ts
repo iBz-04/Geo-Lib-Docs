@@ -32,17 +32,17 @@ const sidebar = (lang, index) => [
         link: lang + 'getting-started/writing',
       },
       {
-        text: ['Next steps', '部署', '配備', 'Sonraki Adımlar'][index],
+        text: ['Next steps', '下一步', '配備', 'Sonraki Adımlar'][index],
         link: lang + 'getting-started/deploy',
       },
     ],
   },
   {
-    text: ['More', '進階', '高度な', 'Daha Fazla'][index],
+    text: ['More', '更多', '高度な', 'Daha Fazla'][index],
     collapsible: true,
     items: [
       {
-        text: ['Credits', '拓展', '拡張', 'Krediler'][index],
+        text: ['Credits', '致謝', '拡張', 'Krediler'][index],
         link: lang + 'advanced/extension',
       },
     ],
@@ -61,7 +61,7 @@ const themeConfig = (lang, index) => ({
       'GitHubda Düzenle',
     ][index],
   },
-  lastUpdatedText: ['Last Updated', '最後更新于', '最終更新', 'Son Güncelleme'][
+  lastUpdatedText: ['Last Updated', '最新更新', '最終更新', 'Son Güncelleme'][
     index
   ],
 })
@@ -74,7 +74,7 @@ export default withPwa(
         'link',
         {
           rel: 'icon',
-          href: '/favicon.png',
+          href: '/favicon.ico',
           sizes: '32x32',
           type: 'image/png',
         },
@@ -84,7 +84,7 @@ export default withPwa(
         {
           src: 'https://plausible.kwaa.dev/js/plausible.js',
           defer: '',
-          'data-domain': 'urara-docs.netlify.app',
+          'data-domain': 'main--geolib-docs.netlify.app',
         },
       ],
     ],
@@ -121,23 +121,23 @@ export default withPwa(
         theme_color: '#ffffff',
         icons: [
           {
-            src: 'assets/any@192.png',
+            src: 'assets/Geolib_logo.jpeg',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'assets/any@512.png',
+            src: 'assets/Geolib_logo.jpeg',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: 'assets/maskable@192.png',
+            src: 'assets/Geolib_logo.jpeg',
             sizes: '192x192',
             type: 'image/png',
             purpose: 'any maskable',
           },
           {
-            src: 'assets/maskable@512.png',
+            src: 'assets/Geolib_logo.jpeg',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'any maskable',

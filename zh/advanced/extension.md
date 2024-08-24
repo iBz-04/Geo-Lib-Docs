@@ -2,9 +2,9 @@
 
 ## 开发者
 
-[@Ibrahim](https://github.com/iBz-04)
+[@iBz](https://github.com/iBz-04)
 
-[@Arda](https://github.com/cyrekWei)
+[@Cyrek](https://github.com/cyrekWei)
 
 ## 贡献者
 
